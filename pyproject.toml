@@ -1,0 +1,26 @@
+[project]
+name = "skill-or-luck"
+version = "0.1.0"
+description = "Tests whether a trading strategy's profit is skill or luck"
+readme = "README.md"
+authors = [
+    { name = "Ben Rowbotham", email = "ben_rowbotham@outlook.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+]
+
+[project.scripts]
+skill-or-luck = "skill_or_luck.report:main"
+
+[build-system]
+requires = ["uv_build>=0.11.8,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

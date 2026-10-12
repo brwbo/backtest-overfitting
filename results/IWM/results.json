@@ -1,0 +1,40 @@
+{
+  "ticker": "IWM",
+  "period": [
+    "2005-01-04",
+    "2025-12-31"
+  ],
+  "split_date": "2019-09-12",
+  "strategies_tried": 224,
+  "buy_and_hold_sharpe": {
+    "in_sample": 0.4378902318004059,
+    "out_of_sample": 0.45557258047148835
+  },
+  "crossover": {
+    "best_params": [
+      15,
+      90
+    ],
+    "best_in_sample_sharpe": 0.540701297438888,
+    "its_out_of_sample_sharpe": 0.30129692014357456,
+    "its_out_of_sample_rank": 88,
+    "median_out_of_sample_sharpe": 0.2628498923124727,
+    "permutation_p_value": 0.627906976744186,
+    "permutations": 300
+  },
+  "logistic_regression": {
+    "in_sample_sharpe": 0.5839254625335387,
+    "out_of_sample_sharpe": 0.49042439728316867,
+    "in_sample_accuracy": 0.5392741061755146,
+    "time_in_market_out_of_sample": 0.9526813880126183,
+    "out_of_sample_permutation_p_value": 0.36212624584717606,
+    "out_of_sample_volatility_matched_p_value": 0.3554817275747508
+  },
+  "monte_carlo": {
+    "paths": 1000,
+    "drawdown_95th_percentile_normal": 0.5996122676729444,
+    "drawdown_95th_percentile_fat_tails": 0.6241098133252804,
+    "worst_single_day_median_normal": -0.05231096512092448,
+    "worst_single_day_median_fat_tails": -0.1360615573241704
+  }
+}
