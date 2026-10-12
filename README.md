@@ -1,6 +1,6 @@
-# skill-or-luck
+# backtest-overfitting
 
-Tests whether a trading strategy's profit is skill or luck.
+Tests whether a trading strategy's backtest holds up on data it never saw.
 
 Search enough strategies and one of them will look brilliant on past data by
 chance. In machine learning this is overfitting. This tool measures it on real
@@ -25,7 +25,7 @@ market data, with four checks:
 ## Results
 
 Daily total returns, January 2005 to December 2025, for three US index funds.
-Sharpe ratios are annualised. Run with `uv run skill-or-luck SPY`.
+Sharpe ratios are annualised. Run with `uv run backtest-overfitting SPY`.
 
 | Fund | Buy and hold, out of sample | In-sample winner: tuned | ... then out of sample | Its rank out of sample | Permutation p |
 |---|---|---|---|---|---|
@@ -67,6 +67,6 @@ misses what really drives crashes: bad days arriving together.
 
 ```
 uv sync
-uv run skill-or-luck SPY        # writes results/SPY/
+uv run backtest-overfitting SPY # writes results/SPY/
 uv run pytest
 ```

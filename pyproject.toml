@@ -1,7 +1,7 @@
 [project]
-name = "skill-or-luck"
+name = "backtest-overfitting"
 version = "0.1.0"
-description = "Tests whether a trading strategy's profit is skill or luck"
+description = "Tests whether a trading strategy's backtest holds up on data it never saw"
 readme = "README.md"
 authors = [
     { name = "Ben Rowbotham", email = "ben_rowbotham@outlook.com" }
@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.scripts]
-skill-or-luck = "skill_or_luck.report:main"
+backtest-overfitting = "backtest_overfitting.report:main"
 
 [build-system]
 requires = ["uv_build>=0.11.8,<0.12.0"]

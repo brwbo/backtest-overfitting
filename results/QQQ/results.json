@@ -7,24 +7,24 @@
   "split_date": "2019-09-12",
   "strategies_tried": 224,
   "buy_and_hold_sharpe": {
-    "in_sample": 0.6772823853098301,
-    "out_of_sample": 0.8938710393452932
+    "in_sample": 0.6772823853098315,
+    "out_of_sample": 0.8938710393452926
   },
   "crossover": {
     "best_params": [
       40,
       130
     ],
-    "best_in_sample_sharpe": 0.8477726148797918,
-    "its_out_of_sample_sharpe": 0.9264993955545908,
+    "best_in_sample_sharpe": 0.8477726148797937,
+    "its_out_of_sample_sharpe": 0.9264993955545906,
     "its_out_of_sample_rank": 99,
-    "median_out_of_sample_sharpe": 0.9103395288024664,
+    "median_out_of_sample_sharpe": 0.9103395288024655,
     "permutation_p_value": 0.25249169435215946,
     "permutations": 300
   },
   "logistic_regression": {
-    "in_sample_sharpe": 0.7155763507092125,
-    "out_of_sample_sharpe": 0.7888449852332169,
+    "in_sample_sharpe": 0.715576350709214,
+    "out_of_sample_sharpe": 0.788844985233216,
     "in_sample_accuracy": 0.5509209100758397,
     "time_in_market_out_of_sample": 0.9987381703470032,
     "out_of_sample_permutation_p_value": 1.0,
@@ -32,8 +32,8 @@
   },
   "monte_carlo": {
     "paths": 1000,
-    "drawdown_95th_percentile_normal": 0.5011320441742474,
-    "drawdown_95th_percentile_fat_tails": 0.4923563457000973,
+    "drawdown_95th_percentile_normal": 0.5011320441742471,
+    "drawdown_95th_percentile_fat_tails": 0.49235634570009706,
     "worst_single_day_median_normal": -0.0466019596944967,
     "worst_single_day_median_fat_tails": -0.1216323118691933
   }

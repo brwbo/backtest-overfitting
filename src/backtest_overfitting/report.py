@@ -1,6 +1,6 @@
 """Run every check on one ticker and write results.json plus three charts.
 
-    uv run skill-or-luck SPY
+    uv run backtest-overfitting SPY
 """
 
 import argparse
@@ -101,7 +101,7 @@ def charts(out: Path, ticker, search, perm, mc_normal, mc_fat) -> None:
     ax.hist(perm.null, bins=40, alpha=0.7, label="best Sharpe on shuffled returns")
     ax.axvline(perm.observed, c="red", lw=2, label=f"real data (p = {perm.p_value:.2f})")
     ax.set_xlabel("Best in-sample Sharpe after searching every strategy")
-    ax.set_title(f"{ticker}: is the winner better than luck?")
+    ax.set_title(f"{ticker}: is the winner better than chance?")
     ax.legend()
     fig.tight_layout()
     fig.savefig(out / "permutation.png", dpi=150)
@@ -120,7 +120,7 @@ def charts(out: Path, ticker, search, perm, mc_normal, mc_fat) -> None:
 
 
 def main() -> None:
-    p = argparse.ArgumentParser(description="Is a trading strategy's profit skill or luck?")
+    p = argparse.ArgumentParser(description="Does a trading strategy's backtest hold up on data it never saw?")
     p.add_argument("ticker", nargs="?", default="SPY")
     p.add_argument("--start", default="2005-01-01")
     p.add_argument("--end", default="2026-01-01")

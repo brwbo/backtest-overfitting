@@ -1,16 +1,16 @@
 import numpy as np
 import pytest
 
-from skill_or_luck import montecarlo, overfit
-from skill_or_luck.backtest import (
+from backtest_overfitting import montecarlo, overfit
+from backtest_overfitting.backtest import (
     crossover_positions,
     max_drawdown,
     moving_average,
     prices_from_returns,
     sharpe,
 )
-from skill_or_luck.ml import LogisticRegression, features, fit_and_position
-from skill_or_luck.permutation import permutation_test
+from backtest_overfitting.ml import LogisticRegression, features, fit_and_position
+from backtest_overfitting.permutation import permutation_test
 
 
 def test_moving_average_matches_naive():
@@ -97,7 +97,7 @@ def test_fat_tails_have_same_volatility_but_worse_extremes():
 
 
 def test_volatility_matched_test_keeps_flat_day_count():
-    from skill_or_luck.permutation import volatility_matched_test
+    from backtest_overfitting.permutation import volatility_matched_test
 
     rng = np.random.default_rng(5)
     r = rng.normal(0, 0.01, 500)
